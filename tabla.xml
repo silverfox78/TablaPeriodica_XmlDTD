@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tabla[
+    <!ELEMENT tabla (grupos, elementos)>
+    <!ELEMENT grupos (grupo+)>
+    <!ELEMENT grupo (id, codigo, nombre, descripcion)>
+    <!ATTLIST grupo id ID #REQUIRED>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autores (autor+)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT publicacion (editorial, edicion, fecha, presentacion, valor)>
+    <!ELEMENT editorial (#PCDATA)>
+    <!ELEMENT edicion (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT presentacion (#PCDATA)>
+    <!ATTLIST presentacion tipo (papel|digital|ambas) "papel">
+    <!ELEMENT valor (#PCDATA)>
+    <!ATTLIST valor moneda CDATA "">
+]>
+<tabla>
+    <grupos>
+        <grupo id="1">
+            <id>1</id>
+            <codigo>I A</codigo>
+            <nombre>metales alcalinos</nombre>
+            <descripcion>
+                Grupo 1 (I A): metales alcalinos
+            </descripcion>
+        </grupo>
+        <grupo id="2">
+            <id>2</id>
+            <codigo>II A</codigo>
+            <nombre>metales alcalinotérreos</nombre>
+            <descripcion>
+                Grupo 2 (II A): metales alcalinotérreos
+            </descripcion>
+        </grupo>
+        <grupo id="3">
+            <id>3</id>
+            <codigo>III B</codigo>
+            <nombre>familia del escandio</nombre>
+            <descripcion>
+                Grupo 3 (III B): familia del escandio (tierras raras y actinidos)
+            </descripcion>
+        </grupo>
+        <grupo id="4">
+            <id>4</id>
+            <codigo>IV B</codigo>
+            <nombre>familia del titanio</nombre>
+            <descripcion>
+                Grupo 4 (IV B): familia del titanio
+            </descripcion>
+        </grupo>
+        <grupo id="5">
+            <id>5</id>
+            <codigo>V B</codigo>
+            <nombre>familia del vanadio</nombre>
+            <descripcion>
+                Grupo 5 (V B): familia del vanadio
+            </descripcion>
+        </grupo>
+        <grupo id="6">
+            <id>6</id>
+            <codigo>VI B</codigo>
+            <nombre>familia del cromo</nombre>
+            <descripcion>
+                Grupo 6 (VI B): familia del cromo
+            </descripcion>
+        </grupo>
+        <grupo id="7">
+            <id>7</id>
+            <codigo>VII B</codigo>
+            <nombre>familia del manganeso</nombre>
+            <descripcion>
+                Grupo 7 (VII B): familia del manganeso
+            </descripcion>
+        </grupo>
+        <grupo id="8">
+            <id>8</id>
+            <codigo>VIII B</codigo>
+            <nombre>familia del hierro</nombre>
+            <descripcion>
+                Grupo 8 (VIII B): familia del hierro
+            </descripcion>
+        </grupo>
+        <grupo id="9">
+            <id>9</id>
+            <codigo>VIII B</codigo>
+            <nombre>familia del cobalto</nombre>
+            <descripcion>
+                Grupo 9 (VIII B): familia del cobalto
+            </descripcion>
+        </grupo>
+        <grupo id="10">
+            <id>10</id>
+            <codigo>VIII B</codigo>
+            <nombre>familia del níquel</nombre>
+            <descripcion>
+                Grupo 10 (VIII B): familia del níquel
+            </descripcion>
+        </grupo>
+        <grupo id="11">
+            <id>11</id>
+            <codigo>I B</codigo>
+            <nombre>familia del cobre</nombre>
+            <descripcion>
+                Grupo 11 (I B): familia del cobre
+            </descripcion>
+        </grupo>
+        <grupo id="12">
+            <id>12</id>
+            <codigo>II B</codigo>
+            <nombre>familia del zinc</nombre>
+            <descripcion>
+                Grupo 12 (II B): familia del zinc
+            </descripcion>
+        </grupo>
+        <grupo id="13">
+            <id>13</id>
+            <codigo>III A</codigo>
+            <nombre>térreos</nombre>
+            <descripcion>
+                Grupo 13 (III A): térreos
+            </descripcion>
+        </grupo>
+        <grupo id="14">
+            <id>14</id>
+            <codigo>IV A</codigo>
+            <nombre>carbonoideos</nombre>
+            <descripcion>
+                Grupo 14 (IV A): carbonoideos
+            </descripcion>
+        </grupo>
+        <grupo id="15">
+            <id>15</id>
+            <codigo>V A</codigo>
+            <nombre>nitrogenoideos</nombre>
+            <descripcion>
+                Grupo 15 (V A): nitrogenoideos
+            </descripcion>
+        </grupo>
+        <grupo id="16">
+            <id>16</id>
+            <codigo>VI A)</codigo>
+            <nombre>calcógenos o anfígenos</nombre>
+            <descripcion>
+                Grupo 16 (VI A): calcógenos o anfígenos
+            </descripcion>
+        </grupo>
+        <grupo id="17">
+            <id>17</id>
+            <codigo>VII A</codigo>
+            <nombre>halógenos</nombre>
+            <descripcion>
+                Grupo 17 (VII A): halógenos
+            </descripcion>
+        </grupo>
+        <grupo id="18">
+            <id>18</id>
+            <codigo>VIII A</codigo>
+            <nombre>gases nobles</nombre>
+            <descripcion>
+                Grupo 18 (VIII A): gases nobles
+            </descripcion>
+        </grupo>
+    </grupos>
+    <elementos>
+        <elemento>
+            <numero></numero>
+            <nombre></nombre>
+            <simbolo></simbolo>
+            <peso></peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento></descubrimiento>
+        </elemento>
+    </elementos>
+</tabla>
