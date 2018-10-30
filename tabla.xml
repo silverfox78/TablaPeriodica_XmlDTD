@@ -163,8 +163,47 @@
             </descripcion>
         </grupo>
     </grupos>
+    <bloques>
+        <bloque>
+            <id>1</id>
+            <codigo>Bloque s</codigo>
+        </bloque>
+        <bloque>
+            <id>2</id>
+            <codigo>Bloque p</codigo>
+        </bloque>
+        <bloque>
+            <id>3</id>
+            <codigo>Bloque d</codigo>
+        </bloque>
+        <bloque>
+            <id>4</id>
+            <codigo>Bloque f</codigo>
+        </bloque>
+    </bloques>
+    <periodos>
+        <periodo>
+            <id>1</id>
+            <fila>1</fila>
+            <bloque>1s</bloque>
+        </periodo>
+    </periodos>
     <elementos>
-        <elemento>
+        <elemento id="1" refGrupo="" refBloque="" refPeriodo="">
+            <numero>1</numero>
+            <nombre>Hidrógeno</nombre>
+            <simbolo>H</simbolo>
+            <peso>1.00794(7)</peso>
+            <densidad>0.084</densidad>
+            <fusion>-259.1</fusion>
+            <ebullicion>-252.69</ebullicion>
+            <descubrimiento>1766</descubrimiento>
+            <grupo>1</grupo>
+            <bloque>1</bloque>
+            <periodo>1</periodo>
+        </elemento>
+
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
             <numero></numero>
             <nombre></nombre>
             <simbolo></simbolo>
@@ -173,6 +212,9 @@
             <fusion></fusion>
             <ebullicion></ebullicion>
             <descubrimiento></descubrimiento>
+            <grupo></grupo>
+            <bloque></bloque>
+            <periodo></periodo>
         </elemento>
     </elementos>
 </tabla>
