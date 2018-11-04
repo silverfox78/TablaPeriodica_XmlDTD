@@ -1,20 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tabla[
-    <!ELEMENT tabla (grupos, elementos)>
+    <!ELEMENT tabla (grupos, bloques, periodos, elementos)>
+    
     <!ELEMENT grupos (grupo+)>
     <!ELEMENT grupo (id, codigo, nombre, descripcion)>
     <!ATTLIST grupo id ID #REQUIRED>
-    <!ELEMENT titulo (#PCDATA)>
-    <!ELEMENT autores (autor+)>
-    <!ELEMENT autor (#PCDATA)>
-    <!ELEMENT publicacion (editorial, edicion, fecha, presentacion, valor)>
-    <!ELEMENT editorial (#PCDATA)>
-    <!ELEMENT edicion (#PCDATA)>
-    <!ELEMENT fecha (#PCDATA)>
-    <!ELEMENT presentacion (#PCDATA)>
-    <!ATTLIST presentacion tipo (papel|digital|ambas) "papel">
-    <!ELEMENT valor (#PCDATA)>
-    <!ATTLIST valor moneda CDATA "">
+    <!ELEMENT id (ANY)>
+    <!ELEMENT codigo (ANY)>
+    <!ELEMENT nombre (ANY)>
+    <!ELEMENT descripcion (ANY)>
+
+    <!ELEMENT bloques (bloque+)>
+    <!ELEMENT bloque (id, codigo, nombre)>
+    <!ATTLIST bloque id ID #REQUIRED>
+    <!ELEMENT id (ANY)>
+    <!ELEMENT codigo (ANY)>
+    <!ELEMENT nombre (ANY)>
+
+    <!ELEMENT periodos (periodo+)>
+    <!ELEMENT periodo (id, fila, codigo, bloque)>
+    <!ATTLIST periodo id ID #REQUIRED>
+    <!ELEMENT id (ANY)>
+    <!ELEMENT fila (ANY)>
+    <!ELEMENT codigo (ANY)>
+    <!ELEMENT bloque (ANY)>
+
+    <!ELEMENT elementos (elemento+)>
+    <!ELEMENT periodo (numero, nombre, simbolo, peso, densidad, fusion, ebullicion, descubrimiento, grupo, bloque, periodo)>
+    <!ATTLIST periodo id ID #REQUIRED>
+    <!ATTLIST periodo refGrupo CDATA "">
+    <!ATTLIST periodo refBloque CDATA "">
+    <!ATTLIST periodo refPeriodo CDATA "">
+    <!ELEMENT numero (ANY)>
+    <!ELEMENT nombre (ANY)>
+    <!ELEMENT simbolo (ANY)>
+    <!ELEMENT peso (ANY)>
+    <!ELEMENT densidad (ANY)>
+    <!ELEMENT fusion (ANY)>
+    <!ELEMENT ebullicion (ANY)>    
+    <!ELEMENT grupo (ANY)>
+    <!ELEMENT bloque (ANY)>
+    <!ELEMENT periodo (ANY)>
+    <!ELEMENT descubrimiento (epoca, inicio, fin)>
+    <!ELEMENT epoca (ANY)>
+    <!ELEMENT inicio (ANY)>
+    <!ELEMENT fin (ANY)>
 ]>
 <tabla>
     <grupos>
@@ -164,57 +194,1684 @@
         </grupo>
     </grupos>
     <bloques>
-        <bloque>
+        <bloque id="1">
             <id>1</id>
-            <codigo>Bloque s</codigo>
+            <codigo>s</codigo>
+            <nombre>Bloque s</nombre>
         </bloque>
-        <bloque>
+        <bloque id="2">
             <id>2</id>
-            <codigo>Bloque p</codigo>
+            <codigo>p</codigo>
+            <nombre>Bloque p</nombre>
         </bloque>
-        <bloque>
+        <bloque id="3">
             <id>3</id>
-            <codigo>Bloque d</codigo>
+            <codigo>d</codigo>
+            <nombre>Bloque d</nombre>
         </bloque>
-        <bloque>
+        <bloque id="4">
             <id>4</id>
-            <codigo>Bloque f</codigo>
+            <codigo>f</codigo>
+            <nombre>Bloque f</nombre>
         </bloque>
     </bloques>
     <periodos>
-        <periodo>
+        <periodo id="1">
             <id>1</id>
             <fila>1</fila>
-            <bloque>1s</bloque>
+            <codigo>1s</codigo>
+            <bloque>s</bloque>
+        </periodo>
+        <periodo id="2">
+            <id>2</id>
+            <fila>2</fila>
+            <codigo>2s</codigo>
+            <bloque>s</bloque>
+        </periodo>
+        <periodo id="3">
+            <id>3</id>
+            <fila>3</fila>
+            <codigo>3s</codigo>
+            <bloque>s</bloque>
+        </periodo>
+        <periodo id="4">
+            <id>4</id>
+            <fila>4</fila>
+            <codigo>4s</codigo>
+            <bloque>s</bloque>
+        </periodo>
+        <periodo id="5">
+            <id>5</id>
+            <fila>5</fila>
+            <codigo>5s</codigo>
+            <bloque>s</bloque>
+        </periodo>
+        <periodo id="6">
+            <id>6</id>
+            <fila>6</fila>
+            <codigo>6s</codigo>
+            <bloque>s</bloque>
+        </periodo>
+        <periodo id="7">
+            <id>7</id>
+            <fila>7</fila>
+            <codigo>7s</codigo>
+            <bloque>s</bloque>
+        </periodo>
+        <periodo id="8">
+            <id>8</id>
+            <fila>8</fila>
+            <codigo>4f</codigo>
+            <bloque>f</bloque>
+        </periodo>
+        <periodo id="9">
+            <id>9</id>
+            <fila>9</fila>
+            <codigo>5f</codigo>
+            <bloque>f</bloque>
+        </periodo>
+        <periodo id="10">
+            <id>10</id>
+            <fila>4</fila>
+            <codigo>3d</codigo>
+            <bloque>d</bloque>
+        </periodo>
+        <periodo id="11">
+            <id>11</id>
+            <fila>5</fila>
+            <codigo>4d</codigo>
+            <bloque>d</bloque>
+        </periodo>
+        <periodo id="12">
+            <id>12</id>
+            <fila>6</fila>
+            <codigo>5d</codigo>
+            <bloque>d</bloque>
+        </periodo>
+        <periodo id="13">
+            <id>13</id>
+            <fila>7</fila>
+            <codigo>6d</codigo>
+            <bloque>d</bloque>
+        </periodo>
+        <periodo id="14">
+            <id>14</id>
+            <fila>2</fila>
+            <codigo>2p</codigo>
+            <bloque>p</bloque>
+        </periodo>
+        <periodo id="15">
+            <id>15</id>
+            <fila>3</fila>
+            <codigo>3p</codigo>
+            <bloque>p</bloque>
+        </periodo>
+        <periodo id="16">
+            <id>16</id>
+            <fila>4</fila>
+            <codigo>4p</codigo>
+            <bloque>p</bloque>
+        </periodo>
+        <periodo id="15">
+            <id>15</id>
+            <fila>5</fila>
+            <codigo>5p</codigo>
+            <bloque>p</bloque>
+        </periodo>
+        <periodo id="16">
+            <id>16</id>
+            <fila>6</fila>
+            <codigo>6p</codigo>
+            <bloque>p</bloque>
         </periodo>
     </periodos>
     <elementos>
-        <elemento id="1" refGrupo="" refBloque="" refPeriodo="">
+        <elemento id="1" refGrupo="1" refBloque="1" refPeriodo="1">
             <numero>1</numero>
             <nombre>Hidrógeno</nombre>
             <simbolo>H</simbolo>
-            <peso>1.00794(7)</peso>
+            <peso>1.00794</peso>
             <densidad>0.084</densidad>
             <fusion>-259.1</fusion>
-            <ebullicion>-252.69</ebullicion>
-            <descubrimiento>1766</descubrimiento>
+            <ebullicion>-252.69</ebullicion>            
             <grupo>1</grupo>
             <bloque>1</bloque>
             <periodo>1</periodo>
+            <descubrimiento>1766</descubrimiento>
         </elemento>
-
+        <elemento id="2" refGrupo="18" refBloque="3" refPeriodo="1">
+            <numero>2</numero>
+            <nombre>Helio</nombre>
+            <simbolo>He</simbolo>
+            <peso>4.002602</peso>
+            <densidad>0.17</densidad>
+            <fusion>-272.2</fusion>
+            <ebullicion>-268.9</ebullicion>            
+            <grupo>1</grupo>
+            <bloque>3</bloque>
+            <periodo>18</periodo>
+            <descubrimiento>1895</descubrimiento>
+        </elemento>
+        <elemento id="3" refGrupo="1" refBloque="1" refPeriodo="2">
+            <numero>3</numero>
+            <nombre>Litio</nombre>
+            <simbolo>Li</simbolo>
+            <peso>6.941</peso>
+            <densidad>0.53</densidad>
+            <fusion>180.5</fusion>
+            <ebullicion>1317</ebullicion>            
+            <grupo>1</grupo>
+            <bloque>1</bloque>
+            <periodo>2</periodo>
+            <descubrimiento>1817</descubrimiento>
+        </elemento>
+        <elemento id="4" refGrupo="2" refBloque="1" refPeriodo="2">
+            <numero>4</numero>
+            <nombre>Berilio</nombre>
+            <simbolo>Be</simbolo>
+            <peso>9.012182</peso>
+            <densidad>1.85</densidad>
+            <fusion>1278</fusion>
+            <ebullicion>2970</ebullicion>
+            <grupo>2</grupo>
+            <bloque>1</bloque>
+            <periodo>2</periodo>
+            <descubrimiento>1797</descubrimiento>
+        </elemento>
+        <elemento id="5" refGrupo="13" refBloque="" refPeriodo="">
+            <numero>5</numero>
+            <nombre>Boro</nombre>
+            <simbolo>B</simbolo>
+            <peso>10.811</peso>
+            <densidad>2.46</densidad>
+            <fusion>2300</fusion>
+            <ebullicion>2550</ebullicion>
+            <grupo>13</grupo>
+            <bloque>2</bloque>
+            <periodo>2</periodo>
+            <descubrimiento>1808</descubrimiento>
+        </elemento>
         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
-            <numero></numero>
-            <nombre></nombre>
-            <simbolo></simbolo>
+            <numero>6</numero>
+            <nombre>Carbono</nombre>
+            <simbolo>C</simbolo>
+            <peso>2.0107</peso>
+            <densidad>3.51</densidad>
+            <fusion>3550</fusion>
+            <ebullicion>4827</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>14</grupo>
+            <bloque>2</bloque>
+            <periodo>2</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>7</numero>
+            <nombre>Nitrógeno</nombre>
+            <simbolo>N</simbolo>
+            <peso>14.0067</peso>
+            <densidad>1.17</densidad>
+            <fusion>-209.9</fusion>
+            <ebullicion>-195.8</ebullicion>
+            <descubrimiento>1772</descubrimiento>
+            <grupo>15</grupo>
+            <bloque>2</bloque>
+            <periodo>2</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>8</numero>
+            <nombre>Oxígeno</nombre>
+            <simbolo>O</simbolo>
+            <peso>15.9994</peso>
+            <densidad>1.33</densidad>
+            <fusion>-218.4</fusion>
+            <ebullicion>-182.9</ebullicion>
+            <descubrimiento>1774</descubrimiento>
+            <grupo>15</grupo>
+            <bloque>2</bloque>
+            <periodo>2</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>9</numero>
+            <nombre>Flúor</nombre>
+            <simbolo>F</simbolo>
+            <peso>18.9984032</peso>
+            <densidad>1.58</densidad>
+            <fusion>-219.6</fusion>
+            <ebullicion>-188.1</ebullicion>
+            <descubrimiento>1886</descubrimiento>
+            <grupo>17</grupo>
+            <bloque>2</bloque>
+            <periodo>2</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>10</numero>
+            <nombre>Neón</nombre>
+            <simbolo>Ne</simbolo>
+            <peso>20.1797</peso>
+            <densidad>0.84</densidad>
+            <fusion>-248.7</fusion>
+            <ebullicion>-246.1</ebullicion>
+            <descubrimiento>1898</descubrimiento>
+            <grupo>18</grupo>
+            <bloque>2</bloque>
+            <periodo>2</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>11</numero>
+            <nombre>Sodio</nombre>
+            <simbolo>Na</simbolo>
+            <peso>22.98976928</peso>
+            <densidad>0.97</densidad>
+            <fusion>97.8</fusion>
+            <ebullicion>892</ebullicion>
+            <descubrimiento>1807</descubrimiento>
+            <grupo>3</grupo>
+            <bloque>1</bloque>
+            <periodo>1</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>12</numero>
+            <nombre>Magnesio</nombre>
+            <simbolo>Mg</simbolo>
+            <peso>24.3050</peso>
+            <densidad>1.74</densidad>
+            <fusion>648.8</fusion>
+            <ebullicion>1107</ebullicion>
+            <descubrimiento>1755</descubrimiento>
+            <grupo>3</grupo>
+            <bloque>1</bloque>
+            <periodo>2</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>13</numero>
+            <nombre>Aluminio</nombre>
+            <simbolo>Al</simbolo>
+            <peso>26.9815386</peso>
+            <densidad>2.70</densidad>
+            <fusion>660.5</fusion>
+            <ebullicion>2467</ebullicion>
+            <descubrimiento>1825</descubrimiento>
+            <grupo>13</grupo>
+            <bloque>2</bloque>
+            <periodo>3</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>14</numero>
+            <nombre>Silicio</nombre>
+            <simbolo>Si</simbolo>
+            <peso>28.0855</peso>
+            <densidad>2.33</densidad>
+            <fusion>1410</fusion>
+            <ebullicion>2355</ebullicion>
+            <descubrimiento>1824</descubrimiento>
+            <grupo>13</grupo>
+            <bloque>2</bloque>
+            <periodo>3</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>15</numero>
+            <nombre>Fósforo</nombre>
+            <simbolo>P</simbolo>
+            <peso>30.973762</peso>
+            <densidad>1.82</densidad>
+            <fusion>44 (P4)</fusion>
+            <ebullicion>280 (P4)</ebullicion>
+            <descubrimiento>1669</descubrimiento>
+            <grupo>15</grupo>
+            <bloque>2</bloque>
+            <periodo>3</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>16</numero>
+            <nombre>Azufre</nombre>
+            <simbolo>S</simbolo>
+            <peso>32.065</peso>
+            <densidad>2.06</densidad>
+            <fusion>113</fusion>
+            <ebullicion>444.7</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>16</grupo>
+            <bloque>2</bloque>
+            <periodo>3</periodo>
+        </elemento> 
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>17</numero>
+            <nombre>Cloro</nombre>
+            <simbolo>Cl</simbolo>
+            <peso>35.453</peso>
+            <densidad>2.95</densidad>
+            <fusion>-34.6</fusion>
+            <ebullicion>-101</ebullicion>
+            <descubrimiento>1774</descubrimiento>
+            <grupo>17</grupo>
+            <bloque>2</bloque>
+            <periodo>3</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>18</numero>
+            <nombre>Argón</nombre>
+            <simbolo>Ar</simbolo>
+            <peso>39.948</peso>
+            <densidad>1.66</densidad>
+            <fusion>-189.4</fusion>
+            <ebullicion>-185.9</ebullicion>
+            <descubrimiento>1894</descubrimiento>
+            <grupo>18</grupo>
+            <bloque>2</bloque>
+            <periodo>3</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>19</numero>
+            <nombre>Potasio</nombre>
+            <simbolo>K</simbolo>
+            <peso>39.0983</peso>
+            <densidad>0.86</densidad>
+            <fusion>63.7</fusion>
+            <ebullicion>774</ebullicion>
+            <descubrimiento>1807</descubrimiento>
+            <grupo>1</grupo>
+            <bloque>1</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>20</numero>
+            <nombre>Calcio</nombre>
+            <simbolo>Ca</simbolo>
+            <peso>40.078</peso>
+            <densidad>1.54</densidad>
+            <fusion>839</fusion>
+            <ebullicion>1487</ebullicion>
+            <descubrimiento>1808</descubrimiento>
+            <grupo>2</grupo>
+            <bloque>1</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>21</numero>
+            <nombre>Escandio</nombre>
+            <simbolo>Sc</simbolo>
+            <peso>44.955912</peso>
+            <densidad>1.54</densidad>
+            <fusion>839</fusion>
+            <ebullicion>1487</ebullicion>
+            <descubrimiento>1808</descubrimiento>
+            <grupo>3</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>22</numero>
+            <nombre>Titanio</nombre>
+            <simbolo>Ti</simbolo>
+            <peso>47.867</peso>
+            <densidad>4.51</densidad>
+            <fusion>1660</fusion>
+            <ebullicion>1487</ebullicion>
+            <descubrimiento>1791</descubrimiento>
+            <grupo>4</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>23</numero>
+            <nombre>Vanadio</nombre>
+            <simbolo>V</simbolo>
+            <peso>50.9415</peso>
+            <densidad>6.09</densidad>
+            <fusion>1890</fusion>
+            <ebullicion>3380</ebullicion>
+            <descubrimiento>1801</descubrimiento>
+            <grupo>5</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>24</numero>
+            <nombre>Cromo</nombre>
+            <simbolo>Cr</simbolo>
+            <peso>51.9961</peso>
+            <densidad>7.14</densidad>
+            <fusion>1857</fusion>
+            <ebullicion>2482</ebullicion>
+            <descubrimiento>1797</descubrimiento>
+            <grupo>6</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>25</numero>
+            <nombre>Manganeso</nombre>
+            <simbolo>Mn</simbolo>
+            <peso>54.938045</peso>
+            <densidad>7.44</densidad>
+            <fusion>1244</fusion>
+            <ebullicion>2097</ebullicion>
+            <descubrimiento>1774</descubrimiento>
+            <grupo>7</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>26</numero>
+            <nombre>Hierro</nombre>
+            <simbolo>Fe</simbolo>
+            <peso>55.845</peso>
+            <densidad>7.87</densidad>
+            <fusion>1535</fusion>
+            <ebullicion>2750</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>8</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>27</numero>
+            <nombre>Cobalto</nombre>
+            <simbolo>Co</simbolo>
+            <peso>58.933200</peso>
+            <densidad>8.89</densidad>
+            <fusion>1495</fusion>
+            <ebullicion>2870</ebullicion>
+            <descubrimiento>1735</descubrimiento>
+            <grupo>9</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>28</numero>
+            <nombre>Níquel</nombre>
+            <simbolo>Ni</simbolo>
+            <peso>58.6934</peso>
+            <densidad>8.91</densidad>
+            <fusion>1453</fusion>
+            <ebullicion>2732</ebullicion>
+            <descubrimiento>1751</descubrimiento>
+            <grupo>10</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>29</numero>
+            <nombre>Cobre</nombre>
+            <simbolo>Cu</simbolo>
+            <peso>63.546</peso>
+            <densidad>8.92</densidad>
+            <fusion>1083.5</fusion>
+            <ebullicion>2595</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>11</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>30</numero>
+            <nombre>Zinc</nombre>
+            <simbolo>Zn</simbolo>
+            <peso>65.409</peso>
+            <densidad>7.14</densidad>
+            <fusion>419.6</fusion>
+            <ebullicion>907</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>12</grupo>
+            <bloque>3</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>31</numero>
+            <nombre>Galio</nombre>
+            <simbolo>Ga</simbolo>
+            <peso>69.723</peso>
+            <densidad>5.91</densidad>
+            <fusion>29.8</fusion>
+            <ebullicion>2403</ebullicion>
+            <descubrimiento>1875</descubrimiento>
+            <grupo>13</grupo>
+            <bloque>2</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>32</numero>
+            <nombre>Germanio</nombre>
+            <simbolo>Ge</simbolo>
+            <peso>72.64</peso>
+            <densidad>5.32</densidad>
+            <fusion>937.4</fusion>
+            <ebullicion>2830</ebullicion>
+            <descubrimiento>1886</descubrimiento>
+            <grupo>14</grupo>
+            <bloque>2</bloque>
+            <periodo>4</periodo>
+        </elemento>
+         <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>33</numero>
+            <nombre>Arsénico</nombre>
+            <simbolo>As</simbolo>
+            <peso>74.92160</peso>
+            <densidad>5.72</densidad>
+            <fusion>613</fusion>
+            <ebullicion>613 (subliminación)</ebullicion>
+            <descubrimiento>1250</descubrimiento>
+            <grupo>15</grupo>
+            <bloque>2</bloque>
+            <periodo>4</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>34</numero>
+            <nombre>Selenio</nombre>
+            <simbolo>Se</simbolo>
+            <peso>78.96</peso>
+            <densidad>4.82</densidad>
+            <fusion>217</fusion>
+            <ebullicion>685</ebullicion>
+            <descubrimiento>1817</descubrimiento>
+            <grupo>16</grupo>
+            <bloque>2</bloque>
+            <periodo>4</periodo>
+        </elemento> 
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>35</numero>
+            <nombre>Bromo</nombre>
+            <simbolo>Br</simbolo>
+            <peso>79.904</peso>
+            <densidad>3.14</densidad>
+            <fusion>-7.3</fusion>
+            <ebullicion>58.8</ebullicion>
+            <descubrimiento>1826</descubrimiento>
+            <grupo>17</grupo>
+            <bloque>2</bloque>
+            <periodo>4</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>35</numero>
+            <nombre>Bromo</nombre>
+            <simbolo>Br</simbolo>
+            <peso>79.904</peso>
+            <densidad>3.14</densidad>
+            <fusion>-7.3</fusion>
+            <ebullicion>58.8</ebullicion>
+            <descubrimiento>1826</descubrimiento>
+            <grupo>17</grupo>
+            <bloque>2</bloque>
+            <periodo>4</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>36</numero>
+            <nombre>Kriptón</nombre>
+            <simbolo>Kr</simbolo>
+            <peso>83.798</peso>
+            <densidad>3.48</densidad>
+            <fusion>-156.6</fusion>
+            <ebullicion>-152.3</ebullicion>
+            <descubrimiento>1898</descubrimiento>
+            <grupo>18</grupo>
+            <bloque>2</bloque>
+            <periodo>4</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>37</numero>
+            <nombre>Rubidio</nombre>
+            <simbolo>Kr</simbolo>
+            <peso>85.4678</peso>
+            <densidad>1.53</densidad>
+            <fusion>39</fusion>
+            <ebullicion>688</ebullicion>
+            <descubrimiento>1861</descubrimiento>
+            <grupo>1</grupo>
+            <bloque>1</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>38</numero>
+            <nombre>Estroncio</nombre>
+            <simbolo>Sr</simbolo>
+            <peso>87.62</peso>
+            <densidad>2.63</densidad>
+            <fusion>769</fusion>
+            <ebullicion>1384</ebullicion>
+            <descubrimiento>1790</descubrimiento>
+            <grupo>2</grupo>
+            <bloque>1</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>39</numero>
+            <nombre>Itrio</nombre>
+            <simbolo>Y</simbolo>
+            <peso>88.90585</peso>
+            <densidad>4.47</densidad>
+            <fusion>1523</fusion>
+            <ebullicion>3337</ebullicion>
+            <descubrimiento>1794</descubrimiento>
+            <grupo>3</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>40</numero>
+            <nombre>Zirconio</nombre>
+            <simbolo>Zr</simbolo>
+            <peso>91.224</peso>
+            <densidad>6.51</densidad>
+            <fusion>1852</fusion>
+            <ebullicion>4377</ebullicion>
+            <descubrimiento>1789</descubrimiento>
+            <grupo>4</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>41</numero>
+            <nombre>Niobio</nombre>
+            <simbolo>Nb</simbolo>
+            <peso>92.906 38</peso>
+            <densidad>8.58</densidad>
+            <fusion>2468</fusion>
+            <ebullicion>4927</ebullicion>
+            <descubrimiento>1801</descubrimiento>
+            <grupo>5</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>                                                                                          
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>42</numero>
+            <nombre>Molibdeno</nombre>
+            <simbolo>Mo</simbolo>
+            <peso>95.94</peso>
+            <densidad>10.28</densidad>
+            <fusion>2617</fusion>
+            <ebullicion>5560</ebullicion>
+            <descubrimiento>1778</descubrimiento>
+            <grupo>6</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>43</numero>
+            <nombre>Tecnecio</nombre>
+            <simbolo>Tc</simbolo>
+            <peso>98.9063</peso>
+            <densidad>11.49</densidad>
+            <fusion>21721</fusion>
+            <ebullicion>5030</ebullicion>
+            <descubrimiento>1937</descubrimiento>
+            <grupo>7</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento> 
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>44</numero>
+            <nombre>Rutenio</nombre>
+            <simbolo>Ru</simbolo>
+            <peso>101.07</peso>
+            <densidad>12.45</densidad>
+            <fusion>2310</fusion>
+            <ebullicion>3900</ebullicion>
+            <descubrimiento>1844</descubrimiento>
+            <grupo>8</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>45</numero>
+            <nombre>Rodio</nombre>
+            <simbolo>Rh</simbolo>
+            <peso>102.90550</peso>
+            <densidad>12.41</densidad>
+            <fusion>1966</fusion>
+            <ebullicion>3727</ebullicion>
+            <descubrimiento>1803</descubrimiento>
+            <grupo>9</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>46</numero>
+            <nombre>Paladio</nombre>
+            <simbolo>Pd</simbolo>
+            <peso>106.42</peso>
+            <densidad>12.02</densidad>
+            <fusion>1552</fusion>
+            <ebullicion>3140</ebullicion>
+            <descubrimiento>1803</descubrimiento>
+            <grupo>10</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>47</numero>
+            <nombre>Plata</nombre>
+            <simbolo>Ag</simbolo>
+            <peso>107.8682</peso>
+            <densidad>10.49</densidad>
+            <fusion>961.9</fusion>
+            <ebullicion>2212</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>11</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>48</numero>
+            <nombre>Cadmio</nombre>
+            <simbolo>Cd</simbolo>
+            <peso>112.411</peso>
+            <densidad>8.64</densidad>
+            <fusion>321</fusion>
+            <ebullicion>765</ebullicion>
+            <descubrimiento>1817</descubrimiento>
+            <grupo>12</grupo>
+            <bloque>3</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>49</numero>
+            <nombre>Indio</nombre>
+            <simbolo>In</simbolo>
+            <peso>114.818</peso>
+            <densidad>7.31</densidad>
+            <fusion>156.2</fusion>
+            <ebullicion>2080</ebullicion>
+            <descubrimiento>1863</descubrimiento>
+            <grupo>13</grupo>
+            <bloque>2</bloque>
+            <periodo>5</periodo>
+        </elemento> 
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>50</numero>
+            <nombre>Estaño</nombre>
+            <simbolo>Sn</simbolo>
+            <peso>118.710</peso>
+            <densidad>7.29</densidad>
+            <fusion>232</fusion>
+            <ebullicion>2270</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>14</grupo>
+            <bloque>2</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>51</numero>
+            <nombre>Antimonio</nombre>
+            <simbolo>Sb</simbolo>
+            <peso>121.760</peso>
+            <densidad>6.69</densidad>
+            <fusion>630.7</fusion>
+            <ebullicion>1750</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>15</grupo>
+            <bloque>2</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>52</numero>
+            <nombre>Teluro</nombre>
+            <simbolo>Te</simbolo>
+            <peso>127.60</peso>
+            <densidad>6.25</densidad>
+            <fusion>449.6</fusion>
+            <ebullicion>990</ebullicion>
+            <descubrimiento>1782</descubrimiento>
+            <grupo>16</grupo>
+            <bloque>2</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>53</numero>
+            <nombre>Yodo</nombre>
+            <simbolo>I</simbolo>
+            <peso>126.90447</peso>
+            <densidad>4.94</densidad>
+            <fusion>113.5</fusion>
+            <ebullicion>184.4</ebullicion>
+            <descubrimiento>1811</descubrimiento>
+            <grupo>17</grupo>
+            <bloque>2</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>54</numero>
+            <nombre>Xenón</nombre>
+            <simbolo>Xe</simbolo>
+            <peso>131.293</peso>
+            <densidad>4.49</densidad>
+            <fusion>-111.9</fusion>
+            <ebullicion>-107</ebullicion>
+            <descubrimiento>1898</descubrimiento>
+            <grupo>18</grupo>
+            <bloque>2</bloque>
+            <periodo>5</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>55</numero>
+            <nombre>Cesio</nombre>
+            <simbolo>Cs</simbolo>
+            <peso>132.9054519</peso>
+            <densidad>1.90</densidad>
+            <fusion>28.4</fusion>
+            <ebullicion>690</ebullicion>
+            <descubrimiento>1860</descubrimiento>
+            <grupo>1</grupo>
+            <bloque>1</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>56</numero>
+            <nombre>Bario</nombre>
+            <simbolo>Ba</simbolo>
+            <peso>137.327</peso>
+            <densidad>3.65</densidad>
+            <fusion>725</fusion>
+            <ebullicion>1640</ebullicion>
+            <descubrimiento>1808</descubrimiento>
+            <grupo>2</grupo>
+            <bloque>1</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>57</numero>
+            <nombre>Lantano</nombre>
+            <simbolo>La</simbolo>
+            <peso>138.90547</peso>
+            <densidad>6.16</densidad>
+            <fusion>920</fusion>
+            <ebullicion>3454</ebullicion>
+            <descubrimiento>1839</descubrimiento>
+            <grupo>4</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>58</numero>
+            <nombre>Cerio</nombre>
+            <simbolo>Ce</simbolo>
+            <peso>140.116</peso>
+            <densidad>6.77</densidad>
+            <fusion>798</fusion>
+            <ebullicion>3257</ebullicion>
+            <descubrimiento>1803</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>59</numero>
+            <nombre>Praseodimio</nombre>
+            <simbolo>Pr</simbolo>
+            <peso>140.90765</peso>
+            <densidad>6.48</densidad>
+            <fusion>931</fusion>
+            <ebullicion>3212</ebullicion>
+            <descubrimiento>1895</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>60</numero>
+            <nombre>Neodimio</nombre>
+            <simbolo>Nd</simbolo>
+            <peso>144.242</peso>
+            <densidad>7.00</densidad>
+            <fusion>1010</fusion>
+            <ebullicion>3127</ebullicion>
+            <descubrimiento>1895</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>61</numero>
+            <nombre>Prometio</nombre>
+            <simbolo>Pm</simbolo>
+            <peso>146.9151</peso>
+            <densidad>7.22</densidad>
+            <fusion>1080</fusion>
+            <ebullicion>2730</ebullicion>
+            <descubrimiento>1945</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>62</numero>
+            <nombre>Samario</nombre>
+            <simbolo>Sm</simbolo>
+            <peso>150.36</peso>
+            <densidad>7.54</densidad>
+            <fusion>1072</fusion>
+            <ebullicion>2730</ebullicion>
+            <descubrimiento>1778</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>63</numero>
+            <nombre>Europio</nombre>
+            <simbolo>Eu</simbolo>
+            <peso>151.964</peso>
+            <densidad>5.25</densidad>
+            <fusion>822</fusion>
+            <ebullicion>1597</ebullicion>
+            <descubrimiento>1901</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>64</numero>
+            <nombre>Gadolinio</nombre>
+            <simbolo>Gd</simbolo>
+            <peso>157.25</peso>
+            <densidad>7.89</densidad>
+            <fusion>1311</fusion>
+            <ebullicion>3233</ebullicion>
+            <descubrimiento>1880</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>65</numero>
+            <nombre>Terbio</nombre>
+            <simbolo>Tb</simbolo>
+            <peso>158.92535</peso>
+            <densidad>8.25</densidad>
+            <fusion>1360</fusion>
+            <ebullicion>3041</ebullicion>
+            <descubrimiento>1843</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>66</numero>
+            <nombre>Disprosio</nombre>
+            <simbolo>Dy</simbolo>
+            <peso>162.500</peso>
+            <densidad>8.56</densidad>
+            <fusion>1409</fusion>
+            <ebullicion>2335</ebullicion>
+            <descubrimiento>1886</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>67</numero>
+            <nombre>Holmio</nombre>
+            <simbolo>Ho</simbolo>
+            <peso>164.93032</peso>
+            <densidad>8.78</densidad>
+            <fusion>1470</fusion>
+            <ebullicion>2720</ebullicion>
+            <descubrimiento>1878</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>68</numero>
+            <nombre>Erbio</nombre>
+            <simbolo>Er</simbolo>
+            <peso>167.259</peso>
+            <densidad>9.05</densidad>
+            <fusion>1522</fusion>
+            <ebullicion>2510</ebullicion>
+            <descubrimiento>1842</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>69</numero>
+            <nombre>Tulio</nombre>
+            <simbolo>Tm</simbolo>
+            <peso>168.93421</peso>
+            <densidad>9.32</densidad>
+            <fusion>1545</fusion>
+            <ebullicion>1727</ebullicion>
+            <descubrimiento>1879</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>70</numero>
+            <nombre>Iterbio</nombre>
+            <simbolo>Yb</simbolo>
+            <peso>173.04</peso>
+            <densidad>6.97</densidad>
+            <fusion>824</fusion>
+            <ebullicion>1193</ebullicion>
+            <descubrimiento>1878</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>71</numero>
+            <nombre>Lutecio</nombre>
+            <simbolo>Lu</simbolo>
+            <peso>174.967</peso>
+            <densidad>9.84</densidad>
+            <fusion>1656</fusion>
+            <ebullicion>3315</ebullicion>
+            <descubrimiento>1907</descubrimiento>
+            <grupo>3</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>72</numero>
+            <nombre>Hafnio</nombre>
+            <simbolo>Hf</simbolo>
+            <peso>178.49</peso>
+            <densidad>13.31</densidad>
+            <fusion>2150</fusion>
+            <ebullicion>5400</ebullicion>
+            <descubrimiento>1923</descubrimiento>
+            <grupo>4</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>73</numero>
+            <nombre>Tantalio</nombre>
+            <simbolo>Ta</simbolo>
+            <peso>180.9479</peso>
+            <densidad>16.68</densidad>
+            <fusion>2996</fusion>
+            <ebullicion>5425</ebullicion>
+            <descubrimiento>1802</descubrimiento>
+            <grupo>5</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>74</numero>
+            <nombre>Wolframio</nombre>
+            <simbolo>W</simbolo>
+            <peso>183.84</peso>
+            <densidad>19.26</densidad>
+            <fusion>3407</fusion>
+            <ebullicion>5927</ebullicion>
+            <descubrimiento>1783</descubrimiento>
+            <grupo>6</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>75</numero>
+            <nombre>Renio</nombre>
+            <simbolo>Re</simbolo>
+            <peso>186.207</peso>
+            <densidad>21.03</densidad>
+            <fusion>3180</fusion>
+            <ebullicion>5627</ebullicion>
+            <descubrimiento>1925</descubrimiento>
+            <grupo>7</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>76</numero>
+            <nombre>Osmio</nombre>
+            <simbolo>Os</simbolo>
+            <peso>190.23</peso>
+            <densidad>22.61</densidad>
+            <fusion>3045</fusion>
+            <ebullicion>5027</ebullicion>
+            <descubrimiento>1803</descubrimiento>
+            <grupo>8</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>77</numero>
+            <nombre>Iridio</nombre>
+            <simbolo>Ir</simbolo>
+            <peso>192.217</peso>
+            <densidad>22.56</densidad>
+            <fusion>2410</fusion>
+            <ebullicion>4130</ebullicion>
+            <descubrimiento>1803</descubrimiento>
+            <grupo>9</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>78</numero>
+            <nombre>Platino</nombre>
+            <simbolo>Pt</simbolo>
+            <peso>195.084</peso>
+            <densidad>21.45</densidad>
+            <fusion>1772</fusion>
+            <ebullicion>3827</ebullicion>
+            <descubrimiento>1735</descubrimiento>
+            <grupo>10</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento> 
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>79</numero>
+            <nombre>Oro</nombre>
+            <simbolo>Au</simbolo>
+            <peso>196.966569</peso>
+            <densidad>19.32</densidad>
+            <fusion>1064.4</fusion>
+            <ebullicion>2940</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>11</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>80</numero>
+            <nombre>Mercurio</nombre>
+            <simbolo>Hg</simbolo>
+            <peso>200.59</peso>
+            <densidad>13.55</densidad>
+            <fusion>-38.9</fusion>
+            <ebullicion>356.6</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>12</grupo>
+            <bloque>3</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>81</numero>
+            <nombre>Talio</nombre>
+            <simbolo>Tl</simbolo>
+            <peso>204.3833</peso>
+            <densidad>11.85</densidad>
+            <fusion>303.6</fusion>
+            <ebullicion>1457</ebullicion>
+            <descubrimiento>1861</descubrimiento>
+            <grupo>13</grupo>
+            <bloque>2</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>82</numero>
+            <nombre>Plomo</nombre>
+            <simbolo>Pb</simbolo>
+            <peso>207.2</peso>
+            <densidad>11.34</densidad>
+            <fusion>327.5</fusion>
+            <ebullicion>1740</ebullicion>
+            <descubrimiento esPrehistoria="Prehistoria">0</descubrimiento>
+            <grupo>14</grupo>
+            <bloque>2</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>83</numero>
+            <nombre>Bismuto</nombre>
+            <simbolo>Bi</simbolo>
+            <peso>208.98040</peso>
+            <densidad>9.80</densidad>
+            <fusion>271.4</fusion>
+            <ebullicion>1560</ebullicion>
+            <descubrimiento>1753</descubrimiento>
+            <grupo>15</grupo>
+            <bloque>2</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>84</numero>
+            <nombre>Polonio</nombre>
+            <simbolo>Po</simbolo>
+            <peso>208.9824</peso>
+            <densidad>9.20</densidad>
+            <fusion>254</fusion>
+            <ebullicion>962</ebullicion>
+            <descubrimiento>1898</descubrimiento>
+            <grupo>16</grupo>
+            <bloque>2</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>85</numero>
+            <nombre>Astato</nombre>
+            <simbolo>At</simbolo>
+            <peso>209.9871</peso>
+            <densidad></densidad>
+            <fusion>302</fusion>
+            <ebullicion>337</ebullicion>
+            <descubrimiento>1940</descubrimiento>
+            <grupo>17</grupo>
+            <bloque>2</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>86</numero>
+            <nombre>Radón</nombre>
+            <simbolo>Rn</simbolo>
+            <peso>222.0176</peso>
+            <densidad>9.23</densidad>
+            <fusion>-71</fusion>
+            <ebullicion>-61.8</ebullicion>
+            <descubrimiento>1900</descubrimiento>
+            <grupo>18</grupo>
+            <bloque>2</bloque>
+            <periodo>6</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>87</numero>
+            <nombre>Francio</nombre>
+            <simbolo>Fr</simbolo>
+            <peso>223.0197</peso>
+            <densidad></densidad>
+            <fusion>27</fusion>
+            <ebullicion>677</ebullicion>
+            <descubrimiento>1939</descubrimiento>
+            <grupo>1</grupo>
+            <bloque>1</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>88</numero>
+            <nombre>Radio</nombre>
+            <simbolo>Ra</simbolo>
+            <peso>226.0254</peso>
+            <densidad>5.50</densidad>
+            <fusion>700</fusion>
+            <ebullicion>1140</ebullicion>
+            <descubrimiento>1898</descubrimiento>
+            <grupo>2</grupo>
+            <bloque>1</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>89</numero>
+            <nombre>Actinio</nombre>
+            <simbolo>Ac</simbolo>
+            <peso>227.0278</peso>
+            <densidad>10.07</densidad>
+            <fusion>1047</fusion>
+            <ebullicion>3197</ebullicion>
+            <descubrimiento>1899</descubrimiento>
+            <grupo>4</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>90</numero>
+            <nombre>Torio</nombre>
+            <simbolo>Th</simbolo>
+            <peso>232.03806</peso>
+            <densidad>11.72</densidad>
+            <fusion>1750</fusion>
+            <ebullicion>4787</ebullicion>
+            <descubrimiento>1829</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>91</numero>
+            <nombre>Protactinio</nombre>
+            <simbolo>Pa</simbolo>
+            <peso>231.03588</peso>
+            <densidad>15.37</densidad>
+            <fusion>1554</fusion>
+            <ebullicion>4030</ebullicion>
+            <descubrimiento>1917</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>92</numero>
+            <nombre>Uranio</nombre>
+            <simbolo>U</simbolo>
+            <peso>238.02891</peso>
+            <densidad>18.97</densidad>
+            <fusion>1132.4</fusion>
+            <ebullicion>3818</ebullicion>
+            <descubrimiento>1789</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>93</numero>
+            <nombre>Neptunio</nombre>
+            <simbolo>Np</simbolo>
+            <peso>237.0482</peso>
+            <densidad>20.48</densidad>
+            <fusion>640</fusion>
+            <ebullicion>3902</ebullicion>
+            <descubrimiento>1940</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>  
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>94</numero>
+            <nombre>Plutonio</nombre>
+            <simbolo>Pu</simbolo>
+            <peso>244.0642</peso>
+            <densidad>19.74</densidad>
+            <fusion>641</fusion>
+            <ebullicion>3327</ebullicion>
+            <descubrimiento>1940</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>95</numero>
+            <nombre>Americio</nombre>
+            <simbolo>Am</simbolo>
+            <peso>243.0614</peso>
+            <densidad>13.67</densidad>
+            <fusion>994</fusion>
+            <ebullicion>2607</ebullicion>
+            <descubrimiento>1944</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>96</numero>
+            <nombre>Curio</nombre>
+            <simbolo>Cm</simbolo>
+            <peso>247.0703</peso>
+            <densidad>13.51</densidad>
+            <fusion>1340</fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1944</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>97</numero>
+            <nombre>Berkelio</nombre>
+            <simbolo>Bk</simbolo>
+            <peso>247.0703</peso>
+            <densidad>13.25</densidad>
+            <fusion>986</fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1949</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>98</numero>
+            <nombre>Californio</nombre>
+            <simbolo>Cf</simbolo>
+            <peso>251.0796</peso>
+            <densidad>15.1</densidad>
+            <fusion>900</fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1950</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>99</numero>
+            <nombre>Einstenio</nombre>
+            <simbolo>Es</simbolo>
+            <peso>252.0829</peso>
+            <densidad></densidad>
+            <fusion>860</fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1952</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>100</numero>
+            <nombre>Fermio</nombre>
+            <simbolo>Fm</simbolo>
+            <peso>257.0951</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1952</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>101</numero>
+            <nombre>Mendelevio</nombre>
+            <simbolo>Md</simbolo>
+            <peso>258.0986</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1955</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>102</numero>
+            <nombre>Nobelio</nombre>
+            <simbolo>No</simbolo>
+            <peso>259.1009</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1958</descubrimiento>
+            <grupo>0</grupo>
+            <bloque>4</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>103</numero>
+            <nombre>Laurencio</nombre>
+            <simbolo>Lr</simbolo>
+            <peso>260.1053</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1961</descubrimiento>
+            <grupo>3</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento> 
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>104</numero>
+            <nombre>Rutherfordio</nombre>
+            <simbolo>Rf</simbolo>
+            <peso>261.1087</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento hasta="1969">1964</descubrimiento>
+            <grupo>4</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>105</numero>
+            <nombre>Dubnio</nombre>
+            <simbolo>Db</simbolo>
+            <peso>262.1138</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento hasta="1970">1967</descubrimiento>
+            <grupo>5</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>106</numero>
+            <nombre>Seaborgio</nombre>
+            <simbolo>Sg</simbolo>
+            <peso>263.1182</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1974</descubrimiento>
+            <grupo>6</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>107</numero>
+            <nombre>Bohrio</nombre>
+            <simbolo>Bh</simbolo>
+            <peso>262.1229</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1976</descubrimiento>
+            <grupo>7</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>108</numero>
+            <nombre>Hassio</nombre>
+            <simbolo>Hs</simbolo>
+            <peso>265</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1984</descubrimiento>
+            <grupo>8</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>109</numero>
+            <nombre>Meitnerio</nombre>
+            <simbolo>Mt</simbolo>
+            <peso>266</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1982</descubrimiento>
+            <grupo>9</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>110</numero>
+            <nombre>Darmstadtio</nombre>
+            <simbolo>Ds</simbolo>
+            <peso>269</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1994</descubrimiento>
+            <grupo>10</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>111</numero>
+            <nombre>Roentgenio</nombre>
+            <simbolo>Rg</simbolo>
+            <peso>272</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1994</descubrimiento>
+            <grupo>11</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>112</numero>
+            <nombre>Copernicio</nombre>
+            <simbolo>Cn</simbolo>
+            <peso>285</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1996</descubrimiento>
+            <grupo>12</grupo>
+            <bloque>3</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>113</numero>
+            <nombre>Nihonio</nombre>
+            <simbolo>Nh</simbolo>
+            <peso>284</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>2004</descubrimiento>
+            <grupo>13</grupo>
+            <bloque>2</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>114</numero>
+            <nombre>Flerovio</nombre>
+            <simbolo>Fl</simbolo>
+            <peso>289</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>1999</descubrimiento>
+            <grupo>14</grupo>
+            <bloque>2</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>115</numero>
+            <nombre>Moscovio</nombre>
+            <simbolo>Mc</simbolo>
+            <peso>288</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>2004</descubrimiento>
+            <grupo>15</grupo>
+            <bloque>2</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>116</numero>
+            <nombre>Livermorio</nombre>
+            <simbolo>Lv</simbolo>
+            <peso>290</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>2006</descubrimiento>
+            <grupo>16</grupo>
+            <bloque>2</bloque>
+            <periodo>7</periodo>
+        </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>117</numero>
+            <nombre>Tenesino</nombre>
+            <simbolo>Ts</simbolo>
             <peso></peso>
             <densidad></densidad>
             <fusion></fusion>
             <ebullicion></ebullicion>
-            <descubrimiento></descubrimiento>
-            <grupo></grupo>
-            <bloque></bloque>
-            <periodo></periodo>
+            <descubrimiento hasta="2010">2009</descubrimiento>
+            <grupo>17</grupo>
+            <bloque>2</bloque>
+            <periodo>7</periodo>
         </elemento>
+        <elemento id="" refGrupo="" refBloque="" refPeriodo="">
+            <numero>118</numero>
+            <nombre>Oganesón</nombre>
+            <simbolo>Og</simbolo>
+            <peso>294</peso>
+            <densidad></densidad>
+            <fusion></fusion>
+            <ebullicion></ebullicion>
+            <descubrimiento>2006</descubrimiento>
+            <grupo>18</grupo>
+            <bloque>2</bloque>
+            <periodo>7</periodo>
+        </elemento>                                                                                                                                                                                       
     </elementos>
 </tabla>
